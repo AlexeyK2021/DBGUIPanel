@@ -1,0 +1,90 @@
+CREATE TABLE client(
+    client_id INT PRIMARY KEY AUTO_INCREMENT,
+    balance REAL NOT NULL,
+    phone_number VARCHAR(25) NOT NULL,
+    account_state BINARY NOT NULL,
+    tariff_id INT NOT NULL
+);
+
+
+CREATE TABLE tariff(
+    tariff_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(128) NOT NULL,
+    cost REAL NOT NULL,
+    description VARCHAR(500) NOT NULL
+);
+
+
+CREATE TABLE add_service(
+    add_service_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(128) NOT NULL,
+    cost REAL NOT NULL,
+    description VARCHAR(500) NOT NULL
+);
+
+
+CREATE TABLE client_add_service(
+    client_add_service_id INT PRIMARY KEY AUTO_INCREMENT,
+    add_service INT NOT NULL,
+    client_id INT NOT NULL,
+    finish_date DATETIME
+);
+
+
+CREATE TABLE personal_info(
+    client_id INT PRIMARY KEY NOT NULL,
+    full_name VARCHAR(128) NOT NULL,
+    passport_data VARCHAR(128) NOT NULL,
+    login VARCHAR(64) NOT NULL,
+    password VARCHAR(64) NOT NULL
+);
+
+
+CREATE TABLE employee(
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
+    full_name VARCHAR(128) NOT NULL,
+    login VARCHAR(64) NOT NULL,
+    password VARCHAR(64) NOT NULL
+);
+
+
+CREATE TABLE report(
+    report_id INT PRIMARY KEY AUTO_INCREMENT,
+    category_id INT NOT NULL,
+    finish_date DATETIME,
+    result BINARY NOT NULL,
+    description VARCHAR(500) NOT NULL
+);
+
+
+CREATE TABLE category(
+    category_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(32) NOT NULL
+);
+
+
+CREATE TABLE file_storage(
+    file_storage_id INT PRIMARY KEY AUTO_INCREMENT,
+    report_id INT NOT NULL,
+    client_id INT NOT NULL
+);
+
+ALTER TABLE client ADD FOREIGN KEY (tariff_id) REFERENCES tariff (tariff_id);
+ALTER TABLE client_add_service ADD FOREIGN KEY (client_id) REFERENCES client (client_id);
+ALTER TABLE client_add_service ADD FOREIGN KEY (add_service) REFERENCES add_service (add_service_id);
+ALTER TABLE personal_info ADD FOREIGN KEY (client_id) REFERENCES client (client_id);
+ALTER TABLE report ADD FOREIGN KEY (category_id) REFERENCES category (category_id);
+ALTER TABLE file_storage ADD FOREIGN KEY (report_id) REFERENCES report (report_id);
+ALTER TABLE file_storage ADD FOREIGN KEY (client_id) REFERENCES client (client_id);
+
+
+DROP TABLE client;
+DROP TABLE tariff;
+DROP TABLE add_service;
+DROP TABLE client_add_service;
+DROP TABLE personal_info;
+DROP TABLE employee;
+DROP TABLE report;
+DROP TABLE category;
+DROP TABLE file_storage;
+

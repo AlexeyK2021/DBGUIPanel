@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://surus.db.elephantsql.com/idunbqle</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="ruvds" uuid="2b233a87-0d85-4851-a0d5-2c6e8f02e79e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://194.87.239.99:3306/mireaDB</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

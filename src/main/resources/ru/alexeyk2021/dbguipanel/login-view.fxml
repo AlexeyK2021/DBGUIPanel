@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="ru.alexeyk2021.dbguipanel.LoginActivityController">
+    <TextField  promptText="Логин" fx:id="login_text"/>
+    <PasswordField  promptText="Пароль" fx:id="password_text"/>
+    <Button text="Button" fx:id="enter_btn" onAction="#enter"/>
+</VBox>
