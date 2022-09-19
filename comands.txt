@@ -11,7 +11,10 @@ CREATE TABLE tariff(
     tariff_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(128) NOT NULL,
     cost REAL NOT NULL,
-    description VARCHAR(500) NOT NULL
+    description VARCHAR(500) NOT NULL,
+    internet_size REAL NOT NULL,
+    minutes_size INT NOT NULL,
+    sms_size INT NOT NULL
 );
 
 
@@ -19,7 +22,10 @@ CREATE TABLE add_service(
     add_service_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(128) NOT NULL,
     cost REAL NOT NULL,
-    description VARCHAR(500) NOT NULL
+    description VARCHAR(500) NOT NULL,
+    internet_size REAL NOT NULL,
+    minutes_size INT NOT NULL,
+    sms_size INT NOT NULL
 );
 
 
@@ -59,7 +65,7 @@ CREATE TABLE report(
 
 CREATE TABLE category(
     category_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(32) NOT NULL
+    name VARCHAR(128) NOT NULL
 );
 
 
@@ -87,4 +93,6 @@ DROP TABLE employee;
 DROP TABLE report;
 DROP TABLE category;
 DROP TABLE file_storage;
+
+
 
