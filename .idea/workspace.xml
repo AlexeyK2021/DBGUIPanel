@@ -5,21 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="057b1d89-cd57-4df0-aa50-e1eed94e5721" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b233a87-0d85-4851-a0d5-2c6e8f02e79e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b233a87-0d85-4851-a0d5-2c6e8f02e79e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBGUIPanel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DBGUIPanel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adding_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/adding_info.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comands.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/DbManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/login-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,12 +53,39 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/alexey/Documents/DBGUIPanel",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.LoginApplication">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.alexeyk2021.dbguipanel.HelloApplication" />
+      <module name="DBGUIPanel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alexeyk2021.dbguipanel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.alexeyk2021.dbguipanel.LoginApplication" />
+      <module name="DBGUIPanel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alexeyk2021.dbguipanel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -61,6 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LoginApplication" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,6 +114,8 @@
       <updated>1663588035062</updated>
       <workItem from="1663588037984" duration="95000" />
       <workItem from="1663588161246" duration="2523000" />
+      <workItem from="1663763366752" duration="1422000" />
+      <workItem from="1663948979195" duration="6745000" />
     </task>
     <servers />
   </component>
@@ -88,5 +132,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

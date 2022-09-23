@@ -1,4 +1,5 @@
-CREATE TABLE client(
+CREATE TABLE client
+(
     client_id INT PRIMARY KEY AUTO_INCREMENT,
     balance REAL NOT NULL,
     phone_number VARCHAR(25) NOT NULL,
@@ -7,7 +8,8 @@ CREATE TABLE client(
 );
 
 
-CREATE TABLE tariff(
+CREATE TABLE tariff
+(
     tariff_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(128) NOT NULL,
     cost REAL NOT NULL,
@@ -18,7 +20,8 @@ CREATE TABLE tariff(
 );
 
 
-CREATE TABLE add_service(
+CREATE TABLE add_service
+(
     add_service_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(128) NOT NULL,
     cost REAL NOT NULL,
@@ -29,7 +32,8 @@ CREATE TABLE add_service(
 );
 
 
-CREATE TABLE client_add_service(
+CREATE TABLE client_add_service
+(
     client_add_service_id INT PRIMARY KEY AUTO_INCREMENT,
     add_service INT NOT NULL,
     client_id INT NOT NULL,
@@ -37,7 +41,8 @@ CREATE TABLE client_add_service(
 );
 
 
-CREATE TABLE personal_info(
+CREATE TABLE personal_info
+(
     client_id INT PRIMARY KEY NOT NULL,
     full_name VARCHAR(128) NOT NULL,
     passport_data VARCHAR(128) NOT NULL,
@@ -46,7 +51,8 @@ CREATE TABLE personal_info(
 );
 
 
-CREATE TABLE employee(
+CREATE TABLE employee
+(
     employee_id INT PRIMARY KEY AUTO_INCREMENT,
     full_name VARCHAR(128) NOT NULL,
     login VARCHAR(64) NOT NULL,
@@ -54,7 +60,8 @@ CREATE TABLE employee(
 );
 
 
-CREATE TABLE report(
+CREATE TABLE report
+(
     report_id INT PRIMARY KEY AUTO_INCREMENT,
     category_id INT NOT NULL,
     finish_date DATETIME,
@@ -63,13 +70,15 @@ CREATE TABLE report(
 );
 
 
-CREATE TABLE category(
+CREATE TABLE category
+(
     category_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(128) NOT NULL
 );
 
 
-CREATE TABLE file_storage(
+CREATE TABLE file_storage
+(
     file_storage_id INT PRIMARY KEY AUTO_INCREMENT,
     report_id INT NOT NULL,
     client_id INT NOT NULL
@@ -94,5 +103,5 @@ DROP TABLE report;
 DROP TABLE category;
 DROP TABLE file_storage;
 
-
+USE mireaDB;
 

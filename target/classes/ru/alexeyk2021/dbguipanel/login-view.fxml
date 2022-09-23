@@ -8,5 +8,5 @@
 fx:controller="ru.alexeyk2021.dbguipanel.LoginActivityController">
     <TextField  promptText="Логин" fx:id="login_text"/>
     <PasswordField  promptText="Пароль" fx:id="password_text"/>
-    <Button text="Button" fx:id="enter_btn" onAction="#enter"/>
+    <Button text="Enter" fx:id="enter_btn" onAction="#enter"/>
 </VBox>
