@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="057b1d89-cd57-4df0-aa50-e1eed94e5721" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b233a87-0d85-4851-a0d5-2c6e8f02e79e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b233a87-0d85-4851-a0d5-2c6e8f02e79e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adding_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/adding_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/comands.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginActivityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/DbManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/login-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +48,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/alexey/Documents/DBGUIPanel",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RunManager" selected="Application.LoginApplication">
@@ -116,6 +109,8 @@
       <workItem from="1663588161246" duration="2523000" />
       <workItem from="1663763366752" duration="1422000" />
       <workItem from="1663948979195" duration="6745000" />
+      <workItem from="1664008995055" duration="69000" />
+      <workItem from="1664009080039" duration="846000" />
     </task>
     <servers />
   </component>
@@ -138,7 +133,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java</url>
-          <line>21</line>
+          <line>23</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

@@ -7,6 +7,8 @@ import java.sql.*;
 public class LoginManager {
     private static LoginManager loginManager = null;
     private DbManager dbManager;
+    private boolean isAdminLogged = false;
+    private int currentUserId = -1;
 
     private LoginManager() {
         dbManager = DbManager.getInstance();
@@ -21,6 +23,7 @@ public class LoginManager {
     public boolean enter(String login, String password) {
         boolean enterResult = checkEnter(login, password);
         System.out.println("LOGIN: " + enterResult);
+
         return enterResult;
     }
 
