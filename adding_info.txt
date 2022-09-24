@@ -1,35 +1,47 @@
 INSERT INTO tariff (name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Smart', 590, 'Базовый пакет интернета и минут', 5.0, 250, 250);
-INSERT INTO tariff (name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('ULTRA', 2900, 'Много минут и интернета', 60.0, 5000, 1000);
-INSERT INTO tariff (name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Тарифище', 790, 'Звонки на все сети России', 30, 700, 700);
-INSERT INTO tariff (name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Супер', 0, 'Для выгодных звонков домашнего региона', 0, 0, 0);
+VALUES ('Smart', 590, 'Базовый пакет интернета и минут', 5.0, 250, 250),
+('ULTRA', 2900, 'Много минут и интернета', 60.0, 5000, 1000),
+('Тарифище', 790, 'Звонки на все сети России', 30, 700, 700),
+('Супер', 0, 'Для выгодных звонков домашнего региона', 0, 0, 0);
 
 INSERT INTO add_service(name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Интернет-Mini', 595.0, 'Интернет для компьютера по всей России', 7, 0, 0);
-INSERT INTO add_service(name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Интернет-Maxi', 945.0, 'Интернет для компьютера по всей России', 15, 0, 0);
-INSERT INTO add_service(name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Интернет-VIP', 1415.0, 'Интернет для компьютера по всей России', 30, 0, 0);
-INSERT INTO add_service(name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Пакет 100 SMS', 145.0, '', 0, 0, 100);
-INSERT INTO add_service(name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Пакет 300 SMS', 250.0, '', 0, 0, 300);
-INSERT INTO add_service(name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Пакет 100 минут', 145.0, '', 0, 100, 0);
-INSERT INTO add_service(name, cost, description, internet_size, minutes_size, sms_size)
-VALUES ('Пакет 300 минут', 350.0, '', 0, 300, 0);
+VALUES ('Интернет-Mini', 595.0, 'Интернет для компьютера по всей России', 7, 0, 0),
+('Интернет-Maxi', 945.0, 'Интернет для компьютера по всей России', 15, 0, 0),
+('Интернет-VIP', 1415.0, 'Интернет для компьютера по всей России', 30, 0, 0),
+('Пакет 100 SMS', 145.0, '', 0, 0, 100),
+('Пакет 300 SMS', 250.0, '', 0, 0, 300),
+('Пакет 100 минут', 145.0, '', 0, 100, 0),
+('Пакет 300 минут', 350.0, '', 0, 300, 0)
 
 INSERT INTO client (balance, phone_number, account_state, tariff_id)
-VALUES (150.0, '+79123456789', 1, 4);
+VALUES (150.0, '+79123456789', 1, 4),
+(250.0, '+79241560739', 1, 4),
+(300.0, '+79530405146', 1, 2),
+(500.0, '+79552920133', 1, 3),
+(182.0, '+79266482049', 1, 2),
+(753.0, '+79694369522', 1, 1),
+(568.0, '+79107395688', 1, 2),
+(198.0, '+79447118103', 1, 3),
+(665.0, '+79277617636', 1, 2),
+(548.0, '+79277771985', 1, 1)
+
 
 INSERT INTO personal_info (client_id, full_name, passport_data, login, password)
-VALUES (1, 'Петров Василий Анатольевич', '0000 123456', 'petrov@mail.ru', 'petrov87');
+VALUES (1, 'Петров Василий Анатольевич', '0000 123456', 'petrov@mail.ru', 'petrov87'),
+(2, 'Панкратова Анна Максимовна', '0000 123558', 'panam@mail.ru', 'p1aan23ef'),
+(3, 'Степанов Даниил Даниилович', '0000 328967', 'stepanov@mail.ru', 'qwerty123'),
+(4, 'Смирнов Савва Матвеевич', '0000 931785', 'smirnovsm@mail.ru','ytrewq321'),
+(5, 'Яковлев Даниил Фёдорович', '0000 987654', 'yakovlv@mail.ru', 'asdfgh456'),
+(6, 'Парфенов Григорий Васильевич', '0000 264893', 'parfenov@mail.ru','kmnbvcd2'),
+(7, 'Козлова Таисия Максимовна', '0000 964872', 'kozlovatm@mail.ru', 'kozlova83'),
+(8, 'Степанова Евгения Ярославовна', '0000 924672', 'Stepanovae@mail.ru', 'azxsdcvf342'),
+(9, 'Большаков Артемий Владимирович', '0000 753987', 'bolshakov@mail.ru', 'bolshakov76'),
+(10, 'Измайлов Кирилл Алексеевич', '0000 931207', 'izmaylov@mail.ru', 'izmaylov65')
 
 INSERT INTO employee(full_name, login, password)
-VALUES ('Смирнов Дмитрий Семенович', 'smirnov@admin.ru', 'admin1234');
+VALUES ('Смирнов Дмитрий Семенович', 'smirnov@admin.ru', 'admin1234'),
+('Воронцов Юрий Алексеевич', 'voroncov@admin.ru', 'Qwerty123')
+('Печин Никита Витальевич', 'pechin@admin.ru', '13082002')
 
 INSERT INTO category(name)
 VALUES ('Пополнение счёта'),
