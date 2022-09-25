@@ -9,4 +9,6 @@ module com.example.dbguipanel {
     exports ru.alexeyk2021.dbguipanel;
     exports ru.alexeyk2021.dbguipanel.managers;
     opens ru.alexeyk2021.dbguipanel.managers to javafx.fxml;
+    exports ru.alexeyk2021.dbguipanel.LoginPage;
+    opens ru.alexeyk2021.dbguipanel.LoginPage to javafx.fxml;
 }

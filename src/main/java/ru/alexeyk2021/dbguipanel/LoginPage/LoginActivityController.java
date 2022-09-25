@@ -1,4 +1,4 @@
-package ru.alexeyk2021.dbguipanel;
+package ru.alexeyk2021.dbguipanel.LoginPage;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

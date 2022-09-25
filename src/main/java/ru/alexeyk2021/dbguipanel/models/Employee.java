@@ -1,13 +1,13 @@
 package ru.alexeyk2021.dbguipanel.models;
 
-public class Admin {
-    private int adminId;
+public class Employee {
+    private int employeeId;
     private String fullName;
     private String login;
     private String password;
 
-    public Admin(int adminId, String fullName, String login, String password) {
-        this.adminId = adminId;
+    public Employee(int employeeId, String fullName, String login, String password) {
+        this.employeeId = employeeId;
         this.fullName = fullName;
         this.login = login;
         this.password = password;

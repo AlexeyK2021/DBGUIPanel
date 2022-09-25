@@ -9,18 +9,14 @@ public class Client {
     private double balance;
     private String phoneNumber;
     private boolean accountState;
-    private Tariff tariff;
-    private ClientPersonalInfo personalInfo;
-    private Report[] reports;
+    private int tariffId;
 
-    public Client(int clientId, double balance, String phoneNumber, boolean accountState, Tariff tariff, ClientPersonalInfo personalInfo, Report[] reports) {
+    public Client(int clientId, double balance, String phoneNumber, boolean accountState, int tariffId, ClientPersonalInfo personalInfo) {
         this.clientId = clientId;
         this.balance = balance;
         this.phoneNumber = phoneNumber;
         this.accountState = accountState;
-        this.tariff = tariff;
-        this.personalInfo = personalInfo;
-        this.reports = reports;
+        this.tariffId = tariffId;
     }
 
     public Client(ResultSet resultSet) {
@@ -42,21 +38,6 @@ public class Client {
         return accountState;
     }
 
-    public Tariff getTariff() {
-        return tariff;
-    }
-
-    public void setTariff(Tariff tariff) {
-        this.tariff = tariff;
-    }
-
-    public ClientPersonalInfo getPersonalInfo() {
-        return personalInfo;
-    }
-
-    public Report[] getReports() {
-        return reports;
-    }
 
     @Override
     public String toString() {
@@ -65,9 +46,6 @@ public class Client {
                 ", balance=" + balance +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", accountState=" + accountState +
-                ", tariff=" + tariff +
-                ", personalInfo=" + personalInfo +
-                ", reports=" + Arrays.toString(reports) +
                 '}';
     }
 }

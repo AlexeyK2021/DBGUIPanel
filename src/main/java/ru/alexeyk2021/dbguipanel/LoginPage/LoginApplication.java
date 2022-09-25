@@ -1,9 +1,10 @@
-package ru.alexeyk2021.dbguipanel;
+package ru.alexeyk2021.dbguipanel.LoginPage;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import ru.alexeyk2021.dbguipanel.HelloApplication;
 
 import java.io.IOException;
 

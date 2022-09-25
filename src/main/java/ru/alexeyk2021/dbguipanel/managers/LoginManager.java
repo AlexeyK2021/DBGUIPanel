@@ -7,6 +7,7 @@ import java.sql.*;
 public class LoginManager {
     private static LoginManager loginManager = null;
     private DbManager dbManager;
+
     private boolean isAdminLogged = false;
     private int currentUserId = -1;
 

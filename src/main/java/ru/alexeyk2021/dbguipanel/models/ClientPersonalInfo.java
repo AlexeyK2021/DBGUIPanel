@@ -1,12 +1,14 @@
 package ru.alexeyk2021.dbguipanel.models;
 
 public class ClientPersonalInfo {
+    private int clientId;
     private String fullName;
     private String passportData;
     private String login;
     private String password;
 
-    public ClientPersonalInfo(String fullName, String passportData, String login, String password) {
+    public ClientPersonalInfo(int clientId, String fullName, String passportData, String login, String password) {
+        this.clientId = clientId;
         this.fullName = fullName;
         this.passportData = passportData;
         this.login = login;
@@ -29,4 +31,7 @@ public class ClientPersonalInfo {
         return password;
     }
 
+    public int getClientId() {
+        return clientId;
+    }
 }

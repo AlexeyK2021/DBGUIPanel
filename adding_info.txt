@@ -28,19 +28,19 @@ VALUES (150.0, '+79123456789', 1, 4),
 
 INSERT INTO personal_info (client_id, full_name, passport_data, login, password)
 VALUES (1, 'Петров Василий Анатольевич', '0000 123456', 'petrov@mail.ru', 'petrov87'),
-(2, 'Панкратова Анна Максимовна', '0000 123558', 'panam@mail.ru', 'p1aan23ef'),
+(2, 'Панкратова Анна Максимовна', '0000 123558', 'panam@mail.ru', 'pankrat2321'),
 (3, 'Степанов Даниил Даниилович', '0000 328967', 'stepanov@mail.ru', 'qwerty123'),
-(4, 'Смирнов Савва Матвеевич', '0000 931785', 'smirnovsm@mail.ru','ytrewq321'),
-(5, 'Яковлев Даниил Фёдорович', '0000 987654', 'yakovlv@mail.ru', 'asdfgh456'),
+(4, 'Смирнов Савва Матвеевич', '0000 931785', 'smirnovsm@mail.ru','smirnov432'),
+(5, 'Яковлев Даниил Фёдорович', '0000 987654', 'yakovlv@mail.ru', 'yadanya32'),
 (6, 'Парфенов Григорий Васильевич', '0000 264893', 'parfenov@mail.ru','kmnbvcd2'),
 (7, 'Козлова Таисия Максимовна', '0000 964872', 'kozlovatm@mail.ru', 'kozlova83'),
-(8, 'Степанова Евгения Ярославовна', '0000 924672', 'Stepanovae@mail.ru', 'azxsdcvf342'),
+(8, 'Степанова Евгения Ярославовна', '0000 924672', 'Stepanovae@mail.ru', 'stepanova123'),
 (9, 'Большаков Артемий Владимирович', '0000 753987', 'bolshakov@mail.ru', 'bolshakov76'),
 (10, 'Измайлов Кирилл Алексеевич', '0000 931207', 'izmaylov@mail.ru', 'izmaylov65')
 
 INSERT INTO employee(full_name, login, password)
 VALUES ('Смирнов Дмитрий Семенович', 'smirnov@admin.ru', 'admin1234'),
-('Воронцов Юрий Алексеевич', 'voroncov@admin.ru', 'Qwerty123')
+('Воронцов Юрий Алексеевич', 'voroncov@admin.ru', 'Qwerty123'),
 ('Печин Никита Витальевич', 'pechin@admin.ru', '13082002')
 
 INSERT INTO category(name)
