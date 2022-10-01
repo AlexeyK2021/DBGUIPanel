@@ -1,6 +1,7 @@
 package ru.alexeyk2021.dbguipanel.managers;
 
 import java.sql.*;
+import java.util.Arrays;
 
 
 public class DbManager {
@@ -91,14 +92,14 @@ public class DbManager {
     public boolean approveClientEnter(String login, String password) {
 //        connect();
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + url + "/" + DbName + "?user=" + user + "&password=" + password)) {
-            PreparedStatement statement = conn.prepareStatement("USE test_mirea_db; " +
-                    "SELECT password FROM personal_info WHERE login = \"" + login + "\";");
+            PreparedStatement statement = conn.prepareStatement("USE test_mirea_db; " +"SELECT password FROM personal_info WHERE login = \"" + login + "\";");
             statement.setString(1, login);
 
             System.out.println(statement.executeQuery().getString("password"));
 //            return statement.getResultSet().getString("password").equals(password);
         } catch (SQLException e) {
-            System.out.println("findClientByLogin##error");
+            System.out.println(Arrays.toString(e.getStackTrace()));
+
         }
         return false;
     }

@@ -7,6 +7,9 @@
 <VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
 fx:controller="ru.alexeyk2021.dbguipanel.LoginPage.LoginActivityController">
     <TextField  promptText="Логин" fx:id="login_text"/>
-    <PasswordField  promptText="Пароль" fx:id="password_text"/>
+    <HBox>
+        <PasswordField  promptText="Пароль" fx:id="password_text"/>
+        <Button fx:id="show_password" onAction="#showPassword"/>
+    </HBox>
     <Button text="Enter" fx:id="enter_btn" onAction="#enter"/>
 </VBox>

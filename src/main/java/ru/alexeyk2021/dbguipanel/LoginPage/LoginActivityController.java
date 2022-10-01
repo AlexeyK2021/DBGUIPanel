@@ -15,6 +15,7 @@ public class LoginActivityController {
     public PasswordField password_text;
     @FXML
     public TextField login_text;
+    public Button show_password;
 
     @FXML
     protected void enter() {
@@ -25,5 +26,10 @@ public class LoginActivityController {
             enter_btn.setStyle("-fx-background-color: Red");
             enter_btn.setText("Error!");
         }
+    }
+
+    @FXML
+    protected void showPassword(){
+        password_text.visibleProperty().set(true);
     }
 }
