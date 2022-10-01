@@ -1,9 +1,5 @@
 package ru.alexeyk2021.dbguipanel.managers;
 
-import ru.alexeyk2021.dbguipanel.models.ClientPersonalInfo;
-
-import java.sql.*;
-
 public class LoginManager {
     private static LoginManager loginManager = null;
     private DbManager dbManager;
@@ -29,11 +25,6 @@ public class LoginManager {
     }
 
     private boolean checkEnter(String login, String password) {
-        for (ClientPersonalInfo info : dbManager.getAllClientsData()) {
-            if (info.getLogin().equals(login) && info.getPassword().equals(password)) {
-                return true;
-            }
-        }
-        return false;
+        return dbManager.approveClientEnter(login, password);
     }
 }
