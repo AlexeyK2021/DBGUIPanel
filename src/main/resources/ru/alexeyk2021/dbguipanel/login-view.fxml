@@ -2,14 +2,13 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
 <VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="ru.alexeyk2021.dbguipanel.LoginPage.LoginActivityController">
-    <TextField  promptText="Логин" fx:id="login_text"/>
-    <HBox>
-        <PasswordField  promptText="Пароль" fx:id="password_text"/>
-        <Button fx:id="show_password" onAction="#showPassword"/>
-    </HBox>
-    <Button text="Enter" fx:id="enter_btn" onAction="#enter"/>
+      fx:controller="ru.alexeyk2021.dbguipanel.LoginPage.LoginActivityController">
+    <TextField promptText="Логин" fx:id="login_text"/>
+    <PasswordField promptText="Пароль" fx:id="password_text"/>
+    <TextField visible="false" fx:id="isDataCorrect"/>
+    <Button text="Login" fx:id="enter_btn" onAction="#enter"/>
+    <Button fx:id="loginAsAdmin" onAction="#loginAsAdmin" text="Login as admin"/>
 </VBox>

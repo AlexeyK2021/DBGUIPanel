@@ -1,14 +1,13 @@
 package ru.alexeyk2021.dbguipanel.managers;
 
 import java.sql.*;
-import java.util.Arrays;
 
 
 public class DbManager {
-    private final String url = "194.87.239.99";
-    private final String user = "alexey";
-    private final String password = "Alexey2002";
-    private final String DbName = "mireaDB";
+    private final String dbUrl = "194.87.239.99";
+    private final String dbUser = "alexey";
+    private final String dbPassword = "Alexey2002";
+    private final String DbName = "test_mirea_db";
     private static DbManager instance;
 
     private DbManager() {
@@ -21,10 +20,9 @@ public class DbManager {
         return instance;
     }
 
-    public void connect() {
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + url + "/" + DbName + "?user=" + user + "&password=" + password)) {
-            Statement statement = conn.createStatement();
-            statement.executeUpdate("USE test_mirea_db;");
+//    public void connect() throws SQLException {
+
+
 //            ResultSet resultSet = statement.executeQuery("SELECT * FROM client;");
 //            ArrayList<Client> clients = new ArrayList<>();
 //            while (resultSet.next()) {
@@ -49,15 +47,16 @@ public class DbManager {
 //  users.add(user);
 //}
 
-        } catch (SQLException e) {
-            // handle any errors
-            System.out.println("SQLException: " + e.getMessage());
-            System.out.println("SQLState: " + e.getSQLState());
-            System.out.println("VendorError: " + e.getErrorCode());
-        } catch (Exception e) {
-            System.out.println("EXCEPTION " + e.getMessage());
-        }
-    }
+//        } catch (SQLException e) {
+//            // handle any errors
+//            System.out.println("SQLException: " + e.getMessage());
+//            System.out.println("SQLState: " + e.getSQLState());
+//            System.out.println("VendorError: " + e.getErrorCode());
+//        } catch (Exception e) {
+//            System.out.println("EXCEPTION " + e.getMessage());
+//        }
+//        }
+//    }
 
 //    public ArrayList<ClientPersonalInfo> getAllClientsData() {
 //        try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + url + "/" + DbName + "?user=" + user + "&password=" + password)) {
@@ -89,18 +88,27 @@ public class DbManager {
 //        return null;
 //    }
 
-    public boolean approveClientEnter(String login, String password) {
-//        connect();
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + url + "/" + DbName + "?user=" + user + "&password=" + password)) {
-            PreparedStatement statement = conn.prepareStatement("USE test_mirea_db; " +"SELECT password FROM personal_info WHERE login = \"" + login + "\";");
+    public int approveEnter(String login, String password, boolean isAdmin) {
+        String selectCmd = "";
+        if (isAdmin) selectCmd = "SELECT employee_id, password FROM employee WHERE login = ? ;";
+        else selectCmd = "SELECT client_id, password FROM personal_info WHERE login = ? ;";
+
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + dbUrl + "/" + DbName + "?user=" + dbUser + "&password=" + dbPassword)) {
+            PreparedStatement statement = conn.prepareStatement(selectCmd);
             statement.setString(1, login);
+            ResultSet resultSet = statement.executeQuery();
 
-            System.out.println(statement.executeQuery().getString("password"));
-//            return statement.getResultSet().getString("password").equals(password);
-        } catch (SQLException e) {
-            System.out.println(Arrays.toString(e.getStackTrace()));
+            while (resultSet.next()) {
+                int userId = resultSet.getInt(1);
+                String passwd = resultSet.getString("password");
+                if (passwd.equals(password))
+                    return userId;
+            }
 
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-        return false;
+        return -1;
     }
+
 }

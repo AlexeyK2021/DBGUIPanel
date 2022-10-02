@@ -1,14 +1,17 @@
-module com.example.dbguipanel {
+module ru.alexeyk.dbguipanel {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
     requires java.sql;
 
 
-    opens ru.alexeyk2021.dbguipanel to javafx.fxml;
     exports ru.alexeyk2021.dbguipanel;
+    opens ru.alexeyk2021.dbguipanel to javafx.fxml;
     exports ru.alexeyk2021.dbguipanel.managers;
     opens ru.alexeyk2021.dbguipanel.managers to javafx.fxml;
     exports ru.alexeyk2021.dbguipanel.LoginPage;
     opens ru.alexeyk2021.dbguipanel.LoginPage to javafx.fxml;
+    exports ru.alexeyk2021.dbguipanel.AdminPage;
+    opens ru.alexeyk2021.dbguipanel.AdminPage to javafx.fxml;
+
 }
