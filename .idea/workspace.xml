@@ -5,33 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="057b1d89-cd57-4df0-aa50-e1eed94e5721" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3bcc0aa4-c0c2-4e2d-8db3-fd2eeb8d5e77.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3bcc0aa4-c0c2-4e2d-8db3-fd2eeb8d5e77.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b233a87-0d85-4851-a0d5-2c6e8f02e79e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b233a87-0d85-4851-a0d5-2c6e8f02e79e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3bcc0aa4-c0c2-4e2d-8db3-fd2eeb8d5e77.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_win_17_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_win_17_0_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/HelloActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/HelloActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/DbManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBGUIPanel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DBGUIPanel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/HelloActivityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/HelloActivityController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/LoginPage/LoginActivityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/LoginPage/LoginActivityController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/LoginPage/LoginApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/LoginPage/LoginApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/login-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/managers/DbManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/managers/DbManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/managers/LoginManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/managers/LoginManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/AddService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/AddService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/ClientAddService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/ClientAddService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/ClientPersonalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/ClientPersonalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/FileStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/FileStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Report.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Report.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Tariff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/alexeyk2021/dbguipanel/models/Tariff.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +59,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "/home/alexey/Documents/DBGUIPanel",
+    "last_opened_file_path": "C:/Users/89151/Documents/Prog/Java/DBGUIPanel",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
@@ -148,6 +133,7 @@
       <workItem from="1664193222774" duration="1381000" />
       <workItem from="1664638848373" duration="1253000" />
       <workItem from="1664640557925" duration="980000" />
+      <workItem from="1664797465803" duration="2704000" />
     </task>
     <servers />
   </component>
