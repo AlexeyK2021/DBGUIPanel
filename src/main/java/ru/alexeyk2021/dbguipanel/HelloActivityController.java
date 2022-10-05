@@ -1,6 +1,8 @@
 package ru.alexeyk2021.dbguipanel;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,6 +23,7 @@ public class HelloActivityController {
     @FXML
     private Label welcomeText;
 
+
     @FXML
     protected void onHelloButtonClick() throws IOException {
         welcomeText.setText("Welcome to JavaFX Application!");
@@ -38,7 +41,8 @@ public class HelloActivityController {
 //        stage.setScene(scene);
 //        stage.show();
         }catch (Exception e){
-
+            System.out.println(e.getMessage());
         }
     }
+
 }

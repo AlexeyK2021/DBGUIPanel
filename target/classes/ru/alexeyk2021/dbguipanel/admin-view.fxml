@@ -1,10 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ru.alexeyk2021.dbguipanel.AdminPage.AdminActivityController"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.alexeyk2021.dbguipanel.AdminPage.AdminActivityController" spacing="15">
 
-</AnchorPane>
+    <padding>
+        <Insets right="25" left="25"/>
+    </padding>
+
+    <HBox alignment="TOP_CENTER">
+        <TextField fx:id="find_client_text" promptText="Client phone number"/>
+        <Button fx:id="find_client_btn" onAction="#findClient" text="find"/>
+        <Button fx:id="create_client_btn" onAction="#createClient" text="new"/>
+    </HBox>
+
+    <ListView fx:id="clients_list_view" onMouseClicked="#chosenClient" prefHeight="100"/>
+
+    <HBox spacing="5">
+        <padding>
+            <Insets left="5" right="5"/>
+        </padding>
+        <Label text="Client name:" minWidth="100"/>
+        <Label fx:id="client_name" prefWidth="250"/>
+        <Button fx:id="set_client_name" onAction="#setClientName" text="Set" prefWidth="40"/>
+    </HBox>
+
+
+    <HBox spacing="5">
+        <padding>
+            <Insets left="5" right="5"/>
+        </padding>
+        <Label text="Account:" minWidth="100"/>
+        <Label fx:id="client_account_state" prefWidth="250"/>
+        <Button fx:id="set_client_account_state" onAction="#setClientAccountState" text="Set" prefWidth="40"/>
+    </HBox>
+
+    <HBox spacing="5">
+        <padding>
+            <Insets left="5" right="5"/>
+        </padding>
+        <Label text="Balance:" minWidth="100"/>
+        <Label fx:id="client_balance"/>
+    </HBox>
+
+
+    <HBox spacing="5">
+        <padding>
+            <Insets left="5" right="5"/>
+        </padding>
+        <Label text="Client tariff:" minWidth="100"/>
+        <Label fx:id="client_tariff" prefWidth="250"/>
+        <Button fx:id="set_client_tariff_button" onAction="#setClientTariff" text="Set" prefWidth="40"/>
+    </HBox>
+
+    <HBox spacing="5">
+        <padding>
+            <Insets left="5" right="5"/>
+        </padding>
+        <Label text="Add services:" minWidth="100"/>
+        <ListView fx:id="client_add_services" prefWidth="250" maxHeight="100"/>
+        <Button fx:id="set_client_add_services_button" onAction="#setClientAddServices" text="Set"/>
+    </HBox>
+
+
+</VBox>

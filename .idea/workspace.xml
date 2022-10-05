@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="057b1d89-cd57-4df0-aa50-e1eed94e5721" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b233a87-0d85-4851-a0d5-2c6e8f02e79e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b233a87-0d85-4851-a0d5-2c6e8f02e79e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_linux_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_linux_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_win_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_linux_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_win_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_linux_17_0_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBGUIPanel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DBGUIPanel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adding_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/adding_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/AdminPage/AdminActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/AdminPage/AdminActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/AdminPage/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/AdminPage/AdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/HelloActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/HelloActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/admin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/admin-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/alexeyk2021/dbguipanel/login-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
         <option value="package-info" />
         <option value="JavaFXApplication" />
+        <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -52,24 +50,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/89151/Documents/Prog/Java/DBGUIPanel&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "C:/Users/89151/Documents/Prog/Java/DBGUIPanel",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.alexeyk2021.dbguipanel.AdminPage" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LoginApplication">
+  <component name="RunManager" selected="Application.AdminApplication">
+    <configuration name="AdminApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.alexeyk2021.dbguipanel.AdminPage.AdminApplication" />
+      <module name="DBGUIPanel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alexeyk2021.dbguipanel.AdminPage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.alexeyk2021.dbguipanel.ClientPage.ClientApplication" />
+      <module name="DBGUIPanel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.alexeyk2021.dbguipanel.ClientPage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.alexeyk2021.dbguipanel.HelloApplication" />
       <module name="DBGUIPanel" />
@@ -109,6 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AdminApplication" />
+        <item itemvalue="Application.ClientApplication" />
         <item itemvalue="Application.LoginApplication" />
         <item itemvalue="Application.HelloApplication" />
       </list>
@@ -134,6 +160,8 @@
       <workItem from="1664638848373" duration="1253000" />
       <workItem from="1664640557925" duration="980000" />
       <workItem from="1664797465803" duration="2704000" />
+      <workItem from="1664975052673" duration="136000" />
+      <workItem from="1664975228159" duration="7778000" />
     </task>
     <servers />
   </component>

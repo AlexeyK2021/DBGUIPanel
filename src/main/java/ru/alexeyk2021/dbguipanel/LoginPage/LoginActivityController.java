@@ -3,20 +3,13 @@ package ru.alexeyk2021.dbguipanel.LoginPage;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Background;
 import javafx.stage.Stage;
 import ru.alexeyk2021.dbguipanel.AdminPage.AdminApplication;
-import ru.alexeyk2021.dbguipanel.managers.DbManager;
 import ru.alexeyk2021.dbguipanel.managers.LoginManager;
-
-import java.io.IOException;
-import java.util.Objects;
 
 public class LoginActivityController {
     @FXML
@@ -26,7 +19,8 @@ public class LoginActivityController {
     @FXML
     public TextField login_text;
     public Button loginAsAdmin;
-    public TextField isDataCorrect;
+    public Label is_data_correct;
+
 
     @FXML
     protected void enter() {
@@ -41,10 +35,20 @@ public class LoginActivityController {
         boolean isLoginSuccess = LoginManager.getInstance().enter(login_text.getText(), password_text.getText(), true);
         changeUI(isLoginSuccess);
         if (isLoginSuccess)
-            changePage();
+            openAdminPage();
     }
 
-    private void changePage() {
+    private void openClientPage(){
+//        try {
+//            Stage stage = (Stage) enter_btn.getScene().getWindow();
+//            Application adminPanel = new AdminApplication();
+//            adminPanel.start(stage);
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
+    }
+
+    private void openAdminPage() {
         try {
             Stage stage = (Stage) enter_btn.getScene().getWindow();
             Application adminPanel = new AdminApplication();
@@ -55,13 +59,13 @@ public class LoginActivityController {
     }
 
     private void changeUI(boolean loginSuccess) {
-        isDataCorrect.setVisible(true);
+        is_data_correct.setVisible(true);
         if (loginSuccess) {
-            isDataCorrect.setText("Login success!");
-            isDataCorrect.setStyle("-fx-background-color: Green");
+            is_data_correct.setText("Login success!");
+            is_data_correct.setStyle("-fx-text-fill: Green");
         } else {
-            isDataCorrect.setText("Login failed!");
-            isDataCorrect.setStyle("-fx-background-color: Red");
+            is_data_correct.setText("Login failed!");
+            is_data_correct.setStyle("-fx-text-fill: Red");
         }
     }
 }

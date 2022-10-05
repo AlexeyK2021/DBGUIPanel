@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ru.alexeyk2021.dbguipanel.ClientPage.ClientActivityController"
+      spacing="15">
+    <VBox>
+        <Label fx:id="client_name"/>
+        <Label fx:id="client_phone_number"/>
+    </VBox>
+
+    <VBox>
+        <HBox>
+            <Label text="Balance:"/>
+            <Label fx:id="client_balance"/>
+            <Button fx:id="add_funds" text="Add funds"/>
+        </HBox>
+        <HBox spacing="15">
+            <Label fx:id="client_internet"/>
+            <Label fx:id="client_minutes"/>
+            <Label fx:id="client_sms"/>
+        </HBox>
+        <ListView fx:id="add_services"/>
+    </VBox>
+
+</VBox>

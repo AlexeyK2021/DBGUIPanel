@@ -1,4 +1,4 @@
-package ru.alexeyk2021.dbguipanel.AdminPage;
+package ru.alexeyk2021.dbguipanel.ClientPage;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,17 +8,17 @@ import ru.alexeyk2021.dbguipanel.HelloApplication;
 
 import java.io.IOException;
 
-public class AdminApplication extends Application {
+public class ClientApplication extends Application {
 
     public static void main(String[] args) {
         launch();
     }
 
     @Override
-    public void start(Stage stage)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("admin-view.fxml"));
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("client-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
-        stage.setTitle("Admin panel");
+        stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
     }

@@ -13,5 +13,8 @@ module ru.alexeyk.dbguipanel {
     opens ru.alexeyk2021.dbguipanel.LoginPage to javafx.fxml;
     exports ru.alexeyk2021.dbguipanel.AdminPage;
     opens ru.alexeyk2021.dbguipanel.AdminPage to javafx.fxml;
-
+    exports ru.alexeyk2021.dbguipanel.models;
+    opens ru.alexeyk2021.dbguipanel.models to javafx.fxml;
+    exports ru.alexeyk2021.dbguipanel.ClientPage;
+    opens ru.alexeyk2021.dbguipanel.ClientPage to javafx.fxml;
 }
