@@ -1,5 +1,7 @@
 package ru.alexeyk2021.dbguipanel.models;
 
+import javax.persistence.*;
+
 public class AddService {
     private int addServiceId;
     private String name;

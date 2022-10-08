@@ -3,6 +3,7 @@ module ru.alexeyk.dbguipanel {
     requires javafx.fxml;
     requires javafx.web;
     requires java.sql;
+    requires javax.persistence;
 
 
     exports ru.alexeyk2021.dbguipanel;

@@ -57,4 +57,16 @@ INSERT INTO category(name)
 VALUES ('Пополнение счёта'),
        ('Подключение доп. услуги'),
        ('Смена тарифа'),
-       ('Отключение доп. услуги');
+       ('Отключение доп. услуги'),
+       ('Списание со счёта');
+
+INSERT INTO report (category_id, finish_date, result, description)
+VALUES (1, "2022-08-10 18:37:00", 1, "Пополнение на 500 рублей"),
+(2, "2022-05-08 10:37:00", 1, "Подключение доп. услуги 100 SMS"),
+(3, "2022-09-13 15:42:00", 1, "Смена тарифа на ULTRA");
+
+INSERT INTO file_storage (report_id, client_id)
+VALUES (1, 4), (2, 1), (4, 2), (3, 5);
+
+INSERT INTO client_add_service(add_service, client_id, finish_date)
+VALUES (4, 5, "2020-08-24 15:29:00");
