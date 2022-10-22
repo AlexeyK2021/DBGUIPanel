@@ -1,9 +1,10 @@
 package ru.alexeyk2021.dbguipanel.models;
 
+import javax.persistence.Entity;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
-
+@Entity
 public class Client {
     private int clientId;
     private double balance;

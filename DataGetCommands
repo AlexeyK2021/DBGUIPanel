@@ -11,7 +11,9 @@
 |         9 | Большаков Артемий Владимирович                             | ULTRA            |     665 | +79277617636 |
 |        10 | Измайлов Кирилл Алексеевич                                 | Smart            |     548 | +79277771985 |
 +-----------+------------------------------------------------------------+------------------+---------+--------------+
-SELECT client.client_id, personal_info.full_name, tariff.name as Tariff_name, client.balance, client.phone_number FROM client JOIN personal_info ON personal_info.client_id = client.client_id JOIN tariff ON tariff.tariff_id = client.tariff_id ORDER BY client.client_id;
+SELECT client.client_id, personal_info.full_name, tariff.name as Tariff_name, client.balance, client.phone_number 
+FROM client JOIN personal_info ON personal_info.client_id = client.client_id 
+JOIN tariff ON tariff.tariff_id = client.tariff_id ORDER BY client.client_id;
 
 +-----------+------------------------------------------------------------+------------------+---------+--------------+
 | client_id | full_name                                                  | Tariff_name      | balance | phone_number |
@@ -25,3 +27,40 @@ SELECT client.client_id, personal_info.full_name, tariff.name as Tariff_name, cl
 +-----------+------------------------------------------------------------+------------------+---------+--------------+
 SELECT client.client_id, personal_info.full_name, tariff.name as Tariff_name, client.balance, client.phone_number FROM client JOIN personal_info ON personal_info.client_id = client.client_id JOIN tariff ON tariff.tariff_id = client.tariff_id WHERE client.balance > 200 ORDER BY client.client_id;
 
+***************************
+
+where join(left + right) union+ and internal query+
+2 triggers + 2 functions + 2 procedures
+UI:
+1) Логин
+2) Поисковая таблица и запрос к этой таблице
+3) Доступ админа добавление и удаление данных в существующие таблицы
+*****************************
+////////////////////////////////////
+Inner queries
+
+SELECT client_id, phone_number FROM client 
+WHERE tariff_id IN (
+	SELECT tariff_id FROM tariff WHERE internet_size > 10
+);
+
+SELECT client_id, full_name FROM personal_info
+WHERE client_id IN (
+	SELECT client_id FROM client WHERE balance > 500
+);
+//////////////////////////////
+UNIONS
+-------------------
+(SELECT client_id, phone_number FROM client
+WHERE balance > 500)
+UNION
+(SELECT client_id, phone_number FROM client
+WHERE balance < 200);
+
+(SELECT name, cost FROM tariff
+WHERE minutes_size > 700)
+UNION
+(SELECT name, cost FROM tariff
+WHERE sms_size > 1000);
+
+-------------------------
