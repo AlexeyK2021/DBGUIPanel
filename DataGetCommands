@@ -25,11 +25,13 @@ JOIN tariff ON tariff.tariff_id = client.tariff_id ORDER BY client.client_id;
 |         9 | Большаков Артемий Владимирович                             | ULTRA            |     665 | +79277617636 |
 |        10 | Измайлов Кирилл Алексеевич                                 | Smart            |     548 | +79277771985 |
 +-----------+------------------------------------------------------------+------------------+---------+--------------+
-SELECT client.client_id, personal_info.full_name, tariff.name as Tariff_name, client.balance, client.phone_number FROM client JOIN personal_info ON personal_info.client_id = client.client_id JOIN tariff ON tariff.tariff_id = client.tariff_id WHERE client.balance > 200 ORDER BY client.client_id;
+SELECT client.client_id, personal_info.full_name, tariff.name as Tariff_name, client.balance, client.phone_number
+FROM client JOIN personal_info ON personal_info.client_id = client.client_id
+JOIN tariff ON tariff.tariff_id = client.tariff_id WHERE client.balance > 200 ORDER BY client.client_id;
 
 ***************************
 
-where join(left + right) union+ and internal query+
+where join(left + right)+ union+ and internal query+
 2 triggers + 2 functions + 2 procedures
 UI:
 1) Логин
@@ -39,7 +41,7 @@ UI:
 ////////////////////////////////////
 Inner queries
 
-SELECT client_id, phone_number FROM client 
+SELECT client_id, phone_number FROM client
 WHERE tariff_id IN (
 	SELECT tariff_id FROM tariff WHERE internet_size > 10
 );
