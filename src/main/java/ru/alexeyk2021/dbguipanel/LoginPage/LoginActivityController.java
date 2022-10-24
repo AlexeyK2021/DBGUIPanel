@@ -32,7 +32,7 @@ public class LoginActivityController {
 
     @FXML
     public void loginAsAdmin(ActionEvent actionEvent) {
-        boolean isLoginSuccess = LoginManager.getInstance().enter(login_text.getText(), password_text.getText(), true);
+        boolean isLoginSuccess = LoginManager.getInstance().enter(login_text.getText(), password_text.getText());
         changeUI(isLoginSuccess);
         if (isLoginSuccess)
             openAdminPage();

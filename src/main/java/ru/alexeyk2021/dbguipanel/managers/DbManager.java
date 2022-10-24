@@ -88,10 +88,9 @@ public class DbManager {
 //        return null;
 //    }
 
-    public int approveEnter(String login, String password, boolean isAdmin) {
+    public int approveEnter(String login, String password) {
         String selectCmd = "";
-        if (isAdmin) selectCmd = "SELECT employee_id, password FROM employee WHERE login = ? ;";
-        else selectCmd = "SELECT client_id, password FROM personal_info WHERE login = ? ;";
+        selectCmd = "SELECT client_id, password FROM personal_info WHERE login = ? ;";
 
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + dbUrl + "/" + DbName + "?user=" + dbUser + "&password=" + dbPassword)) {
             PreparedStatement statement = conn.prepareStatement(selectCmd);

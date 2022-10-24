@@ -9,6 +9,8 @@ public class LoginManager {
 
     private boolean isAdminLogged = false;
     private int currentUserId = -1;
+    private String adminLogin = "smirnov@admin.ru";
+    private String adminPasswd = "ac9689e2272427085e35b9d3e3e8bed88cb3434828b43b86fc0596cad4c6e270";
 
     private LoginManager() {
         dbManager = DbManager.getInstance();
@@ -21,15 +23,12 @@ public class LoginManager {
     }
 
     public boolean enter(String login, String password) {
-        return enter(login, password, false);
-    }
-
-    public boolean enter(String login, String password, boolean isAdmin) {
         String encryptedPassword = bytesToHex(digest(password.getBytes(), "SHA-256"));
-        int enterId = dbManager.approveEnter(login, encryptedPassword, isAdmin);
+        if(login.equals(adminLogin) && password.equals(encryptedPassword)) return true;
+
+        int enterId = dbManager.approveEnter(login, encryptedPassword);
         System.out.println("LOGIN: " + enterId);
         if (enterId > -1) {
-            isAdminLogged = isAdmin;
             currentUserId = enterId;
         }
         return enterId > -1;

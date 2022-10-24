@@ -30,4 +30,3 @@ UNION
 (SELECT name, cost FROM tariff
 WHERE sms_size > 1000);
 
-

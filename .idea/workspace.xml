@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="057b1d89-cd57-4df0-aa50-e1eed94e5721" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_win_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_win_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_17_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_2_1_214.xml" beforeDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inners_union.sql" beforeDir="false" afterPath="$PROJECT_DIR$/inners_union.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/LoginPage/LoginActivityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/DbManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +179,7 @@
       <workItem from="1665225585076" duration="392000" />
       <workItem from="1665225986795" duration="956000" />
       <workItem from="1665308389524" duration="635000" />
+      <workItem from="1666615034573" duration="480000" />
     </task>
     <servers />
   </component>
@@ -207,7 +202,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/alexeyk2021/dbguipanel/managers/LoginManager.java</url>
-          <line>27</line>
+          <line>25</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
