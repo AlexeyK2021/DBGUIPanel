@@ -8,6 +8,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import ru.alexeyk2021.dbguipanel.managers.DbManager;
 
 public class AdminActivityController {
     public TextField find_client_text;
@@ -27,23 +28,33 @@ public class AdminActivityController {
 
 
     public void findClient(ActionEvent actionEvent) {
+
+        DbManager.getInstance().findByPhoneNumber(find_client_text.getText());
     }
 
     public void chosenClient(MouseEvent mouseEvent) {
-    }
 
-    public void setClientTariff(ActionEvent actionEvent) {
-    }
-
-    public void setClientAddServices(ActionEvent actionEvent) {
-    }
-
-    public void setClientName(ActionEvent actionEvent) {
-    }
-
-    public void setClientAccountState(ActionEvent actionEvent) {
     }
 
     public void createClient(ActionEvent actionEvent) {
+
     }
+
+    public void setClientTariff(ActionEvent actionEvent) {
+
+    }
+
+    public void setClientAddServices(ActionEvent actionEvent) {
+
+    }
+
+    public void setClientName(ActionEvent actionEvent) {
+
+    }
+
+    public void setClientAccountState(ActionEvent actionEvent) {
+
+    }
+
+
 }

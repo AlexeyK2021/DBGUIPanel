@@ -1,6 +1,8 @@
 package ru.alexeyk2021.dbguipanel.models;
 
-import javax.persistence.*;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class AddService {
     private int addServiceId;
@@ -19,6 +21,21 @@ public class AddService {
         this.internetSize = internetSize;
         this.minutesSize = minutesSize;
         this.smsSize = smsSize;
+    }
+
+    public AddService(ResultSet resultSet) {
+        try {
+            this.addServiceId = resultSet.getInt("add_service_id");
+            this.name = resultSet.getString("name");
+            this.cost = resultSet.getDouble("cost");
+            this.description = resultSet.getString("description");
+            this.internetSize = resultSet.getDouble("internet_size");
+            this.minutesSize = resultSet.getInt("minutesSize");
+            this.smsSize = resultSet.getInt("smsSize");
+        } catch (
+                SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String getName() {

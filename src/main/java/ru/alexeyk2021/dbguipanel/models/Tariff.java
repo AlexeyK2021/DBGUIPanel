@@ -1,5 +1,8 @@
 package ru.alexeyk2021.dbguipanel.models;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class Tariff {
     private int tariffId;
     private String name;
@@ -17,6 +20,21 @@ public class Tariff {
         this.internetSize = internetSize;
         this.minutesSize = minutesSize;
         this.smsSize = smsSize;
+    }
+
+    public Tariff(ResultSet resultSet) {
+        try {
+            this.tariffId = resultSet.getInt("tariff_id");
+            this.name = resultSet.getString("name");
+            this.cost = resultSet.getDouble("cost");
+            this.description = resultSet.getString("description");
+            this.internetSize = resultSet.getDouble("internet_size");
+            this.minutesSize = resultSet.getInt("minutesSize");
+            this.smsSize = resultSet.getInt("smsSize");
+        } catch (
+                SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String getName() {

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ruvds">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>8.0.30</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="information_schema">
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </schema>
+    <schema id="3" parent="1" name="mireaDB">
+      <Current>1</Current>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="4" parent="1" name="mysql">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="5" parent="1" name="performance_schema">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="6" parent="1" name="sys">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="7" parent="1" name="testSpringBoot">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="8" parent="1" name="test_mirea_db">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <routine id="9" parent="3" name="create_report">
+      <Definer>alexey@%</Definer>
+      <Deterministic>1</Deterministic>
+      <RoutineKind>function</RoutineKind>
+      <SourceTextLength>863</SourceTextLength>
+    </routine>
+    <routine id="10" parent="3" name="getClientData">
+      <Definer>alexey@%</Definer>
+      <RoutineKind>procedure</RoutineKind>
+      <SourceTextLength>289</SourceTextLength>
+    </routine>
+    <routine id="11" parent="3" name="getClientInfoByPhoneNumber">
+      <Definer>alexey@%</Definer>
+      <RoutineKind>procedure</RoutineKind>
+      <SourceTextLength>339</SourceTextLength>
+    </routine>
+    <routine id="12" parent="3" name="new_random_number">
+      <Definer>alexey@%</Definer>
+      <Deterministic>1</Deterministic>
+      <RoutineKind>function</RoutineKind>
+      <SourceTextLength>353</SourceTextLength>
+    </routine>
+    <table id="13" parent="3" name="add_service">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="14" parent="3" name="category">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="15" parent="3" name="client">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="16" parent="3" name="client_add_service">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="17" parent="3" name="file_storage">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="18" parent="3" name="personal_info">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="19" parent="3" name="report">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="20" parent="3" name="tariff">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <argument id="21" parent="9">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="22" parent="9" name="client_id_in">
+      <DataType>int|0s</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="23" parent="9" name="description_in">
+      <DataType>varchar(500)|0s</DataType>
+      <Position>2</Position>
+    </argument>
+    <argument id="24" parent="9" name="result_in">
+      <DataType>binary(1)|0s</DataType>
+      <Position>3</Position>
+    </argument>
+    <argument id="25" parent="9" name="finish_date_in">
+      <DataType>datetime|0s</DataType>
+      <Position>4</Position>
+    </argument>
+    <argument id="26" parent="9" name="category_id_in">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </argument>
+    <argument id="27" parent="11" name="phone_number">
+      <DataType>text|0s</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="28" parent="12">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>varchar(25)|0s</DataType>
+    </argument>
+    <column id="29" parent="13" name="add_service_id">
+      <AutoIncrement>18</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="30" parent="13" name="name">
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="31" parent="13" name="cost">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="32" parent="13" name="description">
+      <DataType>varchar(500)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="33" parent="13" name="internet_size">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="34" parent="13" name="minutes_size">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="35" parent="13" name="sms_size">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <index id="36" parent="13" name="PRIMARY">
+      <ColNames>add_service_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="38" parent="14" name="category_id">
+      <AutoIncrement>6</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="39" parent="14" name="name">
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="40" parent="14" name="PRIMARY">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="41" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="42" parent="15" name="client_id">
+      <AutoIncrement>22</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="43" parent="15" name="balance">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="44" parent="15" name="phone_number">
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="45" parent="15" name="account_state">
+      <DataType>binary(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="46" parent="15" name="tariff_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="47" parent="15" name="client_ibfk_1">
+      <ColNames>tariff_id</ColNames>
+      <RefColNames>tariff_id</RefColNames>
+      <RefTableName>tariff</RefTableName>
+    </foreign-key>
+    <index id="48" parent="15" name="PRIMARY">
+      <ColNames>client_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="49" parent="15" name="tariff_id">
+      <ColNames>tariff_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="50" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <trigger id="51" parent="15" name="client_check_phone_number">
+      <Definer>alexey@%</Definer>
+      <Events>I</Events>
+      <SourceTextLength>135</SourceTextLength>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="52" parent="16" name="client_add_service_id">
+      <AutoIncrement>2</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="53" parent="16" name="add_service">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="54" parent="16" name="client_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="55" parent="16" name="finish_date">
+      <DataType>datetime|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="56" parent="16" name="client_add_service_ibfk_2">
+      <ColNames>add_service</ColNames>
+      <RefColNames>add_service_id</RefColNames>
+      <RefTableName>add_service</RefTableName>
+    </foreign-key>
+    <foreign-key id="57" parent="16" name="client_add_service_ibfk_1">
+      <ColNames>client_id</ColNames>
+      <RefColNames>client_id</RefColNames>
+      <RefTableName>client</RefTableName>
+    </foreign-key>
+    <index id="58" parent="16" name="PRIMARY">
+      <ColNames>client_add_service_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="59" parent="16" name="add_service">
+      <ColNames>add_service</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="60" parent="16" name="client_id">
+      <ColNames>client_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="61" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="62" parent="17" name="file_storage_id">
+      <AutoIncrement>6</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="63" parent="17" name="report_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="64" parent="17" name="client_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="65" parent="17" name="file_storage_ibfk_1">
+      <ColNames>report_id</ColNames>
+      <RefColNames>report_id</RefColNames>
+      <RefTableName>report</RefTableName>
+    </foreign-key>
+    <foreign-key id="66" parent="17" name="file_storage_ibfk_2">
+      <ColNames>client_id</ColNames>
+      <RefColNames>client_id</RefColNames>
+      <RefTableName>client</RefTableName>
+    </foreign-key>
+    <index id="67" parent="17" name="PRIMARY">
+      <ColNames>file_storage_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="68" parent="17" name="report_id">
+      <ColNames>report_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="69" parent="17" name="client_id">
+      <ColNames>client_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="70" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="71" parent="18" name="client_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="72" parent="18" name="full_name">
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="73" parent="18" name="passport_data">
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="74" parent="18" name="login">
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="75" parent="18" name="password">
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="76" parent="18" name="personal_info_ibfk_1">
+      <ColNames>client_id</ColNames>
+      <RefColNames>client_id</RefColNames>
+      <RefTableName>client</RefTableName>
+    </foreign-key>
+    <index id="77" parent="18" name="PRIMARY">
+      <ColNames>client_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="78" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <trigger id="79" parent="18" name="personal_info_email_check">
+      <Definer>alexey@%</Definer>
+      <Events>I</Events>
+      <SourceTextLength>125</SourceTextLength>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="80" parent="19" name="report_id">
+      <AutoIncrement>6</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="81" parent="19" name="category_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="82" parent="19" name="finish_date">
+      <DataType>datetime|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="83" parent="19" name="result">
+      <DataType>binary(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="84" parent="19" name="description">
+      <DataType>varchar(500)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="85" parent="19" name="report_ibfk_1">
+      <ColNames>category_id</ColNames>
+      <RefColNames>category_id</RefColNames>
+      <RefTableName>category</RefTableName>
+    </foreign-key>
+    <index id="86" parent="19" name="PRIMARY">
+      <ColNames>report_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="87" parent="19" name="category_id">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="88" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="89" parent="20" name="tariff_id">
+      <AutoIncrement>16</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="90" parent="20" name="name">
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="91" parent="20" name="cost">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="92" parent="20" name="description">
+      <DataType>varchar(500)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="93" parent="20" name="internet_size">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="94" parent="20" name="minutes_size">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="95" parent="20" name="sms_size">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <index id="96" parent="20" name="PRIMARY">
+      <ColNames>tariff_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="97" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

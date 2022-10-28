@@ -1,6 +1,11 @@
 package ru.alexeyk2021.dbguipanel.managers;
 
+import ru.alexeyk2021.dbguipanel.models.AddService;
+import ru.alexeyk2021.dbguipanel.models.Client;
+import ru.alexeyk2021.dbguipanel.models.Tariff;
+
 import java.sql.*;
+import java.util.ArrayList;
 
 
 public class DbManager {
@@ -89,8 +94,7 @@ public class DbManager {
 //    }
 
     public int approveEnter(String login, String password) {
-        String selectCmd = "";
-        selectCmd = "SELECT client_id, password FROM personal_info WHERE login = ? ;";
+        String selectCmd = "SELECT client_id, password FROM personal_info WHERE login = ? ORDER BY client_id LIMIT 1;";
 
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + dbUrl + "/" + DbName + "?user=" + dbUser + "&password=" + dbPassword)) {
             PreparedStatement statement = conn.prepareStatement(selectCmd);
@@ -110,4 +114,44 @@ public class DbManager {
         return -1;
     }
 
+    public Client findByPhoneNumber(String phone_number) {
+        String selectClientCmd = "SELECT client_id, balance, phone_number, account_state " +
+                "FROM client WHERE phone_number = ? ORDER BY client_id LIMIT 1;";
+        String selectTariffCmd = "SELECT * FROM tariff WHERE tariff_id = (SELECT tariff_id FROM client WHERE phone_number = ?);";
+        String selectAddServices = "SELECT * FROM add_service WHERE add_service_id IN (" +
+                "    SELECT add_service FROM client_add_service WHERE client_id = (" +
+                "        SELECT client_id FROM client WHERE phone_number = ?));";
+
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + dbUrl + "/" + DbName + "?user=" + dbUser + "&password=" + dbPassword)) {
+            PreparedStatement statement = conn.prepareStatement(selectClientCmd);
+            statement.setString(1, phone_number);
+            ResultSet user = statement.executeQuery();
+            user.next();
+            Client client = new Client(user);
+
+            statement = conn.prepareStatement(selectTariffCmd);
+            statement.setString(1, phone_number);
+            ResultSet client_tariff = statement.executeQuery();
+            client_tariff.next();
+
+            client.setTariff(new Tariff(client_tariff));
+
+            statement = conn.prepareStatement(selectAddServices);
+            statement.setString(1, phone_number);
+
+            ResultSet addServices = statement.executeQuery();
+            ArrayList<AddService> adds = new ArrayList<>();
+
+            while (addServices.next()) {
+                adds.add(new AddService(addServices));
+            }
+
+            client.setAddServiceList(adds);
+            return client;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
 }
