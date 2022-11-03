@@ -31,8 +31,7 @@ public class Tariff {
             this.internetSize = resultSet.getDouble("internet_size");
             this.minutesSize = resultSet.getInt("minutesSize");
             this.smsSize = resultSet.getInt("smsSize");
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }

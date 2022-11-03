@@ -9,6 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import ru.alexeyk2021.dbguipanel.AdminPage.AdminApplication;
+import ru.alexeyk2021.dbguipanel.ClientPage.ClientApplication;
 import ru.alexeyk2021.dbguipanel.managers.LoginManager;
 
 public class LoginActivityController {
@@ -26,8 +27,8 @@ public class LoginActivityController {
     protected void enter() {
         boolean isLoginSuccess = LoginManager.getInstance().enter(login_text.getText(), password_text.getText());
         changeUI(isLoginSuccess);
-//        if (isLoginSuccess)
-//            changePage();
+        if (isLoginSuccess)
+            openClientPage();
     }
 
     @FXML
@@ -39,13 +40,13 @@ public class LoginActivityController {
     }
 
     private void openClientPage(){
-//        try {
-//            Stage stage = (Stage) enter_btn.getScene().getWindow();
-//            Application adminPanel = new AdminApplication();
-//            adminPanel.start(stage);
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            Stage stage = (Stage) enter_btn.getScene().getWindow();
+            Application clientPage = new ClientApplication();
+            clientPage.start(stage);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void openAdminPage() {

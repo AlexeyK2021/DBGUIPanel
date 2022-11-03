@@ -12,10 +12,13 @@ public class DbManager {
     private final String dbUrl = "194.87.239.99";
     private final String dbUser = "alexey";
     private final String dbPassword = "Alexey2002";
-    private final String DbName = "test_mirea_db";
+    private final String DbName = "mireaDB";
     private static DbManager instance;
 
+    private final String connectionString;
+
     private DbManager() {
+        connectionString = "jdbc:mysql://" + dbUrl + "/" + DbName + "?user=" + dbUser + "&password=" + dbPassword;
     }
 
     public static DbManager getInstance() {
@@ -94,49 +97,37 @@ public class DbManager {
 //    }
 
     public int approveEnter(String login, String password) {
-        String selectCmd = "SELECT client_id, password FROM personal_info WHERE login = ? ORDER BY client_id LIMIT 1;";
-
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + dbUrl + "/" + DbName + "?user=" + dbUser + "&password=" + dbPassword)) {
-            PreparedStatement statement = conn.prepareStatement(selectCmd);
+        try (Connection conn = DriverManager.getConnection(connectionString)) {
+            PreparedStatement statement = conn.prepareStatement("call approveEnter(?, ?);");
             statement.setString(1, login);
+            statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
 
-            while (resultSet.next()) {
-                int userId = resultSet.getInt(1);
-                String passwd = resultSet.getString("password");
-                if (passwd.equals(password))
-                    return userId;
-            }
+            resultSet.next();
+            return resultSet.getInt(1);
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("ERROR:" + e.getMessage());
         }
         return -1;
     }
 
     public Client findByPhoneNumber(String phone_number) {
-        String selectClientCmd = "SELECT client_id, balance, phone_number, account_state " +
-                "FROM client WHERE phone_number = ? ORDER BY client_id LIMIT 1;";
-        String selectTariffCmd = "SELECT * FROM tariff WHERE tariff_id = (SELECT tariff_id FROM client WHERE phone_number = ?);";
-        String selectAddServices = "SELECT * FROM add_service WHERE add_service_id IN (" +
-                "    SELECT add_service FROM client_add_service WHERE client_id = (" +
-                "        SELECT client_id FROM client WHERE phone_number = ?));";
-
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://" + dbUrl + "/" + DbName + "?user=" + dbUser + "&password=" + dbPassword)) {
-            PreparedStatement statement = conn.prepareStatement(selectClientCmd);
+        try (Connection conn = DriverManager.getConnection(connectionString)) {
+            PreparedStatement statement = conn.prepareStatement("call selectClientByNumber('?');");
             statement.setString(1, phone_number);
             ResultSet user = statement.executeQuery();
-            user.next();
+            user.next(); ///????
             Client client = new Client(user);
 
-            statement = conn.prepareStatement(selectTariffCmd);
+            statement = conn.prepareStatement("call selectTariffByNumber('?');");
             statement.setString(1, phone_number);
             ResultSet client_tariff = statement.executeQuery();
-            client_tariff.next();
+            client_tariff.next();///????
 
             client.setTariff(new Tariff(client_tariff));
 
-            statement = conn.prepareStatement(selectAddServices);
+            statement = conn.prepareStatement("call selectAddServicesByNumber('?');");
             statement.setString(1, phone_number);
 
             ResultSet addServices = statement.executeQuery();

@@ -7,12 +7,12 @@
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <ServerVersion>8.0.30</ServerVersion>
     </root>
-    <schema id="2" parent="1" name="information_schema">
-      <CollationName>utf8mb3_general_ci</CollationName>
-    </schema>
-    <schema id="3" parent="1" name="mireaDB">
+    <schema id="2" parent="1" name="mireaDB">
       <Current>1</Current>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="3" parent="1" name="information_schema">
+      <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <schema id="4" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
@@ -29,57 +29,57 @@
     <schema id="8" parent="1" name="test_mirea_db">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <routine id="9" parent="3" name="create_report">
+    <routine id="9" parent="2" name="create_report">
       <Definer>alexey@%</Definer>
       <Deterministic>1</Deterministic>
       <RoutineKind>function</RoutineKind>
       <SourceTextLength>863</SourceTextLength>
     </routine>
-    <routine id="10" parent="3" name="getClientData">
+    <routine id="10" parent="2" name="getClientData">
       <Definer>alexey@%</Definer>
       <RoutineKind>procedure</RoutineKind>
       <SourceTextLength>289</SourceTextLength>
     </routine>
-    <routine id="11" parent="3" name="getClientInfoByPhoneNumber">
+    <routine id="11" parent="2" name="getClientInfoByPhoneNumber">
       <Definer>alexey@%</Definer>
       <RoutineKind>procedure</RoutineKind>
       <SourceTextLength>339</SourceTextLength>
     </routine>
-    <routine id="12" parent="3" name="new_random_number">
+    <routine id="12" parent="2" name="new_random_number">
       <Definer>alexey@%</Definer>
       <Deterministic>1</Deterministic>
       <RoutineKind>function</RoutineKind>
       <SourceTextLength>353</SourceTextLength>
     </routine>
-    <table id="13" parent="3" name="add_service">
+    <table id="13" parent="2" name="add_service">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="14" parent="3" name="category">
+    <table id="14" parent="2" name="category">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="15" parent="3" name="client">
+    <table id="15" parent="2" name="client">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="16" parent="3" name="client_add_service">
+    <table id="16" parent="2" name="client_add_service">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="17" parent="3" name="file_storage">
+    <table id="17" parent="2" name="file_storage">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="18" parent="3" name="personal_info">
+    <table id="18" parent="2" name="personal_info">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="19" parent="3" name="report">
+    <table id="19" parent="2" name="report">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="20" parent="3" name="tariff">
+    <table id="20" parent="2" name="tariff">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
