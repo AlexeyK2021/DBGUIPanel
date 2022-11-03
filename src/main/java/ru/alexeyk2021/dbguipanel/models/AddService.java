@@ -37,8 +37,10 @@ public class AddService {
             throw new RuntimeException(e);
         }
     }
+/*
 
-    public String getName() {
+*/
+ public String getName() {
         return name;
     }
 

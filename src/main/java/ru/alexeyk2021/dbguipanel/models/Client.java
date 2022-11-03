@@ -15,8 +15,10 @@ public class Client {
     private Tariff tariff;
     private ClientPersonalInfo personalInfo;
     private ArrayList<AddService> addServiceList;
+    private ArrayList<Report> reportList;
 
-    public Client(int clientId, double balance, String phoneNumber, boolean accountState, Tariff tariff, ClientPersonalInfo personalInfo, ArrayList<AddService> addServiceList) {
+    public Client(int clientId, double balance, String phoneNumber, boolean accountState, Tariff tariff,
+                  ClientPersonalInfo personalInfo, ArrayList<AddService> addServiceList, ArrayList<Report> reportList) {
         this.clientId = clientId;
         this.balance = balance;
         this.phoneNumber = phoneNumber;
@@ -25,6 +27,8 @@ public class Client {
         this.tariff = tariff;
         this.personalInfo = personalInfo;
         this.addServiceList = addServiceList;
+
+        this.reportList = reportList;
     }
 
     public Client(ResultSet resultSet) {
@@ -68,6 +72,14 @@ public class Client {
 
     public void setAddServiceList(ArrayList<AddService> addServiceList) {
         this.addServiceList = addServiceList;
+    }
+
+    public ArrayList<Report> getReportList() {
+        return reportList;
+    }
+
+    public void setReportList(ArrayList<Report> reportList) {
+        this.reportList = reportList;
     }
 }
 

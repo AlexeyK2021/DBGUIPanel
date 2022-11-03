@@ -1,5 +1,7 @@
 package ru.alexeyk2021.dbguipanel.managers;
 
+import ru.alexeyk2021.dbguipanel.models.Client;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -7,7 +9,7 @@ public class LoginManager {
     private static LoginManager loginManager = null;
     private DbManager dbManager;
 
-    private int currentUserId = -1;
+    private Client currentUserId = null;
     private String adminLogin = "smirnov@admin.ru";
     private String adminPasswd = "ac9689e2272427085e35b9d3e3e8bed88cb3434828b43b86fc0596cad4c6e270";
 
@@ -24,14 +26,11 @@ public class LoginManager {
     public boolean enter(String login, String password) {
         String encryptedPassword = bytesToHex(digest(password.getBytes(), "SHA-256"));
 
-        if(login.equals(adminLogin) && password.equals(encryptedPassword)) return true;
+        if (login.equals(adminLogin) && password.equals(encryptedPassword)) return true;
 
-        int enterId = dbManager.approveEnter(login, encryptedPassword);
-        System.out.println("LOGIN: " + enterId);
-        if (enterId > -1) {
-            currentUserId = enterId;
-        }
-        return enterId > -1;
+        currentUserId = dbManager.approveEnter(login, encryptedPassword);
+
+        return currentUserId != null;
     }
 
     private static byte[] digest(byte[] input, String algorithm) {

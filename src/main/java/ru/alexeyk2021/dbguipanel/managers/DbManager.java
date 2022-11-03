@@ -1,8 +1,6 @@
 package ru.alexeyk2021.dbguipanel.managers;
 
-import ru.alexeyk2021.dbguipanel.models.AddService;
-import ru.alexeyk2021.dbguipanel.models.Client;
-import ru.alexeyk2021.dbguipanel.models.Tariff;
+import ru.alexeyk2021.dbguipanel.models.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -96,7 +94,7 @@ public class DbManager {
 //        return null;
 //    }
 
-    public int approveEnter(String login, String password) {
+    public Client approveEnter(String login, String password) {
         try (Connection conn = DriverManager.getConnection(connectionString)) {
             PreparedStatement statement = conn.prepareStatement("call approveEnter(?, ?);");
             statement.setString(1, login);
@@ -104,40 +102,51 @@ public class DbManager {
             ResultSet resultSet = statement.executeQuery();
 
             resultSet.next();
-            return resultSet.getInt(1);
+            return findByPhoneNumber(resultSet.getString(1));
 
         } catch (Exception e) {
             System.out.println("ERROR:" + e.getMessage());
         }
-        return -1;
+        return null;
     }
 
     public Client findByPhoneNumber(String phone_number) {
         try (Connection conn = DriverManager.getConnection(connectionString)) {
-            PreparedStatement statement = conn.prepareStatement("call selectClientByNumber('?');");
+            PreparedStatement statement = conn.prepareStatement("call selectClientByNumber(?);");
             statement.setString(1, phone_number);
             ResultSet user = statement.executeQuery();
             user.next(); ///????
             Client client = new Client(user);
 
-            statement = conn.prepareStatement("call selectTariffByNumber('?');");
+            statement = conn.prepareStatement("call selectTariffByNumber(?);");
             statement.setString(1, phone_number);
             ResultSet client_tariff = statement.executeQuery();
-            client_tariff.next();///????
 
+            client_tariff.next();///????
             client.setTariff(new Tariff(client_tariff));
 
-            statement = conn.prepareStatement("call selectAddServicesByNumber('?');");
+            statement = conn.prepareStatement("call selectAddServicesByNumber(?);");
             statement.setString(1, phone_number);
-
             ResultSet addServices = statement.executeQuery();
             ArrayList<AddService> adds = new ArrayList<>();
 
             while (addServices.next()) {
                 adds.add(new AddService(addServices));
             }
-
             client.setAddServiceList(adds);
+
+            statement = conn.prepareStatement("call selectReportsByNumber(?);");
+            statement.setString(1, phone_number);
+            ResultSet reports = statement.executeQuery();
+
+            ArrayList<Report> reps = new ArrayList<>();
+            while (reports.next()) {
+                Report report = new Report(reports);
+                report.setCategory(new Category(reports));
+                reps.add(report);
+            }
+            client.setReportList(reps);
+
             return client;
 
         } catch (Exception e) {
