@@ -3,8 +3,6 @@ package ru.alexeyk2021.dbguipanel.models;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Client {
     private int clientId;
@@ -46,7 +44,7 @@ public class Client {
         return balance;
     }
 
-    public boolean isAccountState() {
+    public boolean accountState() {
         return accountState;
     }
 

@@ -110,6 +110,23 @@ public class DbManager {
         return null;
     }
 
+    public ArrayList<String> findByPartNumber(String phone_number) {
+        try (Connection conn = DriverManager.getConnection(connectionString)) {
+            PreparedStatement statement = conn.prepareStatement("call getLikeNumbersList(?);");
+            statement.setString(1, phone_number + "%");
+            ResultSet numbers = statement.executeQuery();
+
+            ArrayList<String> numberList = new ArrayList<>();
+            while (numbers.next()) {
+                numberList.add(numbers.getString("phone_number"));
+            }
+            return numberList;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
     public Client findByPhoneNumber(String phone_number) {
         try (Connection conn = DriverManager.getConnection(connectionString)) {
             PreparedStatement statement = conn.prepareStatement("call selectClientByNumber(?);");

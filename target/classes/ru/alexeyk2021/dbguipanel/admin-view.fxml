@@ -17,11 +17,13 @@
         <TextField fx:id="find_client_text" promptText="Client phone number"/>
         <Button fx:id="find_client_btn" onAction="#findClient" text="find"/>
         <Button fx:id="create_client_btn" onAction="#createClient" text="new"/>
+
+    </HBox>
+    <HBox alignment="CENTER">
+        <ListView fx:id="clients_list_view" onMouseClicked="#chosenClient" prefHeight="150" maxWidth="250"/>
     </HBox>
 
-    <ListView fx:id="clients_list_view" onMouseClicked="#chosenClient" prefHeight="100"/>
-
-    <HBox spacing="5">
+    <HBox spacing="5" alignment="CENTER">
         <padding>
             <Insets left="5" right="5"/>
         </padding>
@@ -31,7 +33,7 @@
     </HBox>
 
 
-    <HBox spacing="5">
+    <HBox spacing="5" alignment="CENTER">
         <padding>
             <Insets left="5" right="5"/>
         </padding>
@@ -40,16 +42,17 @@
         <Button fx:id="set_client_account_state" onAction="#setClientAccountState" text="Set" prefWidth="40"/>
     </HBox>
 
-    <HBox spacing="5">
+    <HBox spacing="5" alignment="CENTER">
         <padding>
             <Insets left="5" right="5"/>
         </padding>
         <Label text="Balance:" minWidth="100"/>
-        <Label fx:id="client_balance"/>
+        <VBox minWidth="250"/>
+        <Label fx:id="client_balance" prefWidth="40"/>
     </HBox>
 
 
-    <HBox spacing="5">
+    <HBox spacing="5" alignment="CENTER">
         <padding>
             <Insets left="5" right="5"/>
         </padding>
@@ -58,12 +61,12 @@
         <Button fx:id="set_client_tariff_button" onAction="#setClientTariff" text="Set" prefWidth="40"/>
     </HBox>
 
-    <HBox spacing="5">
+    <HBox spacing="5" alignment="CENTER">
         <padding>
             <Insets left="5" right="5"/>
         </padding>
         <Label text="Add services:" minWidth="100"/>
-        <ListView fx:id="client_add_services" prefWidth="250" maxHeight="100"/>
+        <ListView fx:id="client_add_services" prefWidth="250" maxHeight="75"/>
         <Button fx:id="set_client_add_services_button" onAction="#setClientAddServices" text="Set"/>
     </HBox>
 
